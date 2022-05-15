@@ -1,8 +1,5 @@
 var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
-
-var timeBlocks = $(".time-blocks");
-// var currentTime = moment().hour();
+$("#currentDay").text(today.format("MMM Do, YYYY, h:mm:ss a"));
 
 function hourTracker() {
   //get current number of hours.
@@ -10,15 +7,15 @@ function hourTracker() {
   console.log("hour is: " + currentTime);
   // loop over time blocks
   $(".time-block").each(function () {
-    var blockHour = parseInt($(this).attr("id").split("hour")[1]);
-    console.log(blockHour, currentTime);
+    var timeBlock = parseInt($(this).attr("id").split("hour")[1]);
+    console.log(timeBlock, currentTime);
 
     //check if we've moved past this time, click into css/html given classes of past, present, or future
-    if (blockHour < currentTime) {
+    if (timeBlock < currentTime) {
       $(this).addClass("past");
       $(this).removeClass("future");
       $(this).removeClass("present");
-    } else if (blockHour === currentTime) {
+    } else if (timeBlock === currentTime) {
       $(this).removeClass("past");
       $(this).addClass("present");
       $(this).removeClass("future");
