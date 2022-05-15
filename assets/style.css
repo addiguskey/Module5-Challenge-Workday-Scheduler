@@ -1,0 +1,99 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: rgb(108, 126, 204);
+    text-shadow: 2px 2px rgba(236, 177, 68, 0.926);
+    border-radius: 0;
+    border-bottom: 5px solid black;
+    font-family: 'Shrikhand', cursive;
+}
+
+ table,
+ th,
+ td {
+     border-radius: 10px;
+    }
+    
+    th,
+    td {
+        border-color: #d9d9d9;
+        background-color: #d9d9d9b9;
+        text-align: center;
+    }
+    tr {
+        height: 10%;
+    }
+    #schedule-table {
+     padding: 2px;
+}
+.description {
+    white-space: pre-wrap;
+}
+
+.time-block {
+    text-align: center;
+    border-radius: 15px;
+}
+
+.row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;
+    border-spacing:0 15px;
+
+}
+.title-hour {
+    color: whitesmoke;
+        background-color: rgb(236, 68, 68);
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+}
+
+.hour {
+    color: whitesmoke;
+    background-color: rgb(236, 177, 68);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.past {
+    background-color: #d3d3d3;
+    color: white;
+}
+
+.present {
+    background-color: #ff6961;
+    color: white;
+}
+
+.future {
+    background-color: #77dd77;
+    color: white;
+}
+
+/* .saveBtn {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+} */
+
+.saveBtn i:hover {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
