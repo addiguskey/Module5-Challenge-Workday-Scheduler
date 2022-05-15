@@ -1,26 +1,43 @@
-// Use Moment.js to format the following variables:
-// 1. What is today's date in the following format: Jan 1st, 1999?
 var today = moment();
-$("#1a").text(today.format("MMM Do, YYYY"));
+$("#currentDay").text(today.format("MMM Do, YYYY"));
 
-// 2. What is the day of the week today?
-var dayWeek = today.format("[Today is] dddd");
-$("#2a").text(dayWeek);
+var timeBlocks = $(".time-blocks");
+// var currentTime = moment().hour();
 
-// 3. Parse the following date, 11/3/2020, and convert it into the following format: Sunday, February 14th 2010, 3:25:50 pm.
-var reformatDate = moment("11/3/20", "MM-DD-YY").format(
-  "dddd, MMMM Do YYYY, h:mm:ss a"
-);
-$("#3a").text(reformatDate);
+function hourTracker() {
+  //get current number of hours.
+  var currentTime = moment().hour(); // use of moment.js
+  console.log("hour is: " + currentTime);
+  // loop over time blocks
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+    console.log(blockHour, currentTime);
 
-// 4. I need to place my recycling bin on the curb on every odd week of the year for collection. Do I need to put out my recycling bin out this week?
-var weekNum = today.format("w");
-var takeOut;
-// Check odd, then assign boolean
-if (weekNum % 2) {
-  takeOut = true;
-} else {
-  takeOut = false;
+    //check if we've moved past this time, click into css/html given classes of past, present, or future
+    if (blockHour < currentTime) {
+      $(this).addClass("past");
+      $(this).removeClass("future");
+      $(this).removeClass("present");
+    } else if (blockHour === currentTime) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+      $(this).removeClass("future");
+    } else {
+      $(this).removeClass("present");
+      $(this).removeClass("past");
+      $(this).addClass("future");
+    }
+  });
 }
+hourTracker(); //re-run function
 
-$("#4a").text(takeOut + ", because it's currently week " + weekNum);
+$("#hour8 .description").val(localStorage.getItem("hour8"));
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour10 .description").val(localStorage.getItem("hour10"));
+$("#hour11 .description").val(localStorage.getItem("hour11"));
+$("#hour12 .description").val(localStorage.getItem("hour12"));
+$("#hour13 .description").val(localStorage.getItem("hour13"));
+$("#hour14 .description").val(localStorage.getItem("hour14"));
+$("#hour15 .description").val(localStorage.getItem("hour15"));
+$("#hour16 .description").val(localStorage.getItem("hour16"));
+$("#hour17 .description").val(localStorage.getItem("hour17"));

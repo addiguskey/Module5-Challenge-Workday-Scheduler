@@ -26,6 +26,13 @@
       rel="stylesheet"
     />
     <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -33,135 +40,74 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead">IT'S A GREAT DAY TO HAVE A GREAT DAY ! 🤠</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <!-- Scheduling table -->
-    <div class="where-schedule-goes">
-      <table
-        class="table table-borderless m-auto p-auto"
-        style="width: 80%"
-        id="schedule-table"
-      >
-        <tr></tr>
-        <tr>
-          <th scope="col" class="title-hour">Hour</th>
-          <th scope="col" class="title-todo">To-Do's</th>
-          <th scope="col"></th>
-        </tr>
-        <tr>
-          <th scope="row" class="hour">9:00</th>
-          <td>Only Love</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <th scope="row" class="hour">10:00</th>
-          <td>Keep Your Head Up</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <th scope="row" class="hour">11:00</th>
-          <td>I Forget Where We Were</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <th scope="row" class="hour">12:00</th>
-          <td>The Wolves</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <th scope="row" class="hour">1:00</th>
-          <td>The Fear</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="hour">2:00</th>
-          <td>The Fear</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="hour">3:00</th>
-          <td>The Fear</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="hour">4:00</th>
-          <td>The Fear</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-        <tr>
-          <th scope="row" class="hour">5:00</th>
-          <td>The Fear</td>
-          <td>
-            <input
-              type="image"
-              src="./assets/images/save-img.png"
-              width="15%"
-              class="saveBtn"
-            />
-          </td>
-        </tr>
-      </table>
+    <div class="container">
+      <div class="row time-block" id="hour9">
+        <div class="col-md-1 hour rounded-left">9:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour10">
+        <div class="col-md-1 hour rounded-left">10:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour11">
+        <div class="col-md-1 hour rounded-left">11:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour12">
+        <div class="col-md-1 hour rounded-left">12:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour13">
+        <div class="col-md-1 hour rounded-left">1:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour14">
+        <div class="col-md-1 hour rounded-left">2:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour15">
+        <div class="col-md-1 hour rounded-left">3:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour16">
+        <div class="col-md-1 hour rounded-left">4:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
+      <div class="row time-block" id="hour17">
+        <div class="col-md-1 hour rounded-left">5:00</div>
+        <textarea class="col-md-10 description"></textarea>
+        <button class="btn saveBtn col-md-1 align-items-center">
+          <input type="image" src="./assets/images/save-img.png" width="35%" />
+        </button>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
